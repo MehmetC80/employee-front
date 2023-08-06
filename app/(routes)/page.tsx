@@ -1,6 +1,7 @@
 import HomeTable from '@/components/home-table';
 import getAllEmployees from '../actions/getAllEmployees';
 
+const API = process.env.NEXT_PUBLIC_EMPLOYEE_API || '';
 export default async function Home() {
   const employeeData = await getAllEmployees();
 

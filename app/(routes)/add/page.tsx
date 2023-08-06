@@ -1,4 +1,3 @@
-import getEmployeeById from '@/app/actions/getEmployeeById';
 import EmployeeForm from '@/components/employee-form';
 
 const AddPage = async () => {

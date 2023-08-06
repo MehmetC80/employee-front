@@ -7,7 +7,7 @@ interface Employee {
 }
 
 const API = process.env.NEXT_PUBLIC_EMPLOYEE_API || '';
-export default async function updateEmployees(id: number, employee: Employee) {
+export default async function updateEmployees(id: string, employee: Employee) {
   try {
     const emp: Employee = await axios.put(`${API}/${id}`, employee);
 

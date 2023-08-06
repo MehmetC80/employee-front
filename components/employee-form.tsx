@@ -67,7 +67,9 @@ const EmployeeForm = ({ initialData }: EmployeeFormProps) => {
   });
 
   const onSubmit = async (data: EmployeeFormValues) => {
-    const id: number = params.employeeId as any;
+    const id: string = params.employeeId as any;
+    console.log(id);
+    console.log(data);
     try {
       setIsLoading(true);
       if (initialData) {

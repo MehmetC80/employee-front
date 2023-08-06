@@ -1,7 +1,7 @@
 import getEmployeeById from '@/app/actions/getEmployeeById';
 import EmployeeForm from '@/components/employee-form';
 
-const UpdatePage = async ({ params }: { params: { employeeId: number } }) => {
+const UpdatePage = async ({ params }: { params: { employeeId: string } }) => {
   const employee = await getEmployeeById(params.employeeId);
 
   return (

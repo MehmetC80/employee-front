@@ -20,7 +20,7 @@ import deleteEmployeeById from '@/app/actions/deleteEmployeeById';
 import { useRouter } from 'next/navigation';
 
 interface Employee {
-  id: number;
+  id: string;
   firstname: string;
   lastname: string;
   email: string;
@@ -37,7 +37,7 @@ const HomeTable = ({ employeeData }: HomeTableProps) => {
     setData(employeeData);
   }, [employeeData]);
 
-  const handleDelete = (id: number) => {
+  const handleDelete = (id: string) => {
     try {
       setLoading(true);
       deleteEmployeeById(id);

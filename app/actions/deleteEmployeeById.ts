@@ -7,7 +7,7 @@ interface Employee {
 }
 
 const API = process.env.NEXT_PUBLIC_EMPLOYEE_API || '';
-export default async function deleteEmployeeById(id: number) {
+export default async function deleteEmployeeById(id: string) {
   try {
     const emp = await axios.delete(API + '/' + id);
 
